@@ -1,8 +1,8 @@
 # MYNews 📰
-> A news application where you can read, save, and search news all over the world!
-<br></br>
-> [LIVE DEMO](https://appetize.io/app/xztln4i2worlyzoqxqt46o26oi)
-<br></br>
+**A NEWS APPLICATION WHERE YOU READ, SAVE, AND SEARCH NEWS ALL OVER THE WORLD!**
+> **[LIVE DEMO](https://appetize.io/app/xztln4i2worlyzoqxqt46o26oi)**
+
+<br>
 <div align="center">
   <img src="https://github.com/LeonardoChandra/News-API/assets/137888895/ca85db80-0d48-44fe-a941-87255d9c7fab"  />
 </div>
@@ -40,7 +40,7 @@
 
 <br></br>
 ## Project Experience 🚀
-It is my first time developing an android mobile application for viewing news and I learned a lot of things. The first being how to utilize API in an app, the news that are shown in the app are sent from news API. Second, how to use Room database as a local database for saved news. Lastly, I learned how to use asynchronous pagination, this serves the purpose of showing news without the needs to refresh or start a new task. 
+It is my first time developing an android mobile application for viewing news and I learned a lot of things. The first being how to utilize API in an app, the news that are shown in the app are sent from news API. Second, how to use Room database as a local database for saved news. Lastly, I learned how to use asynchronous pagination, this serves the purpose of showing news without the needs to refresh or start a new task. If you have any comment or suggestion for improvement, be sure to reach me out through my [GitHub issue](https://github.com/LeonardoChandra/News-API/issues).
 
 <br></br>
 ## Installation 📂
@@ -53,4 +53,4 @@ It is my first time developing an android mobile application for viewing news an
 
 <br></br>
 ## Thank you! 🐥
-Give a ⭐ if you like my my news mobile app!
+Give a ⭐ if you like my news mobile app!
