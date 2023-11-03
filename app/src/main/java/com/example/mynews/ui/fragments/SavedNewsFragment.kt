@@ -1,7 +1,9 @@
 package com.example.mynews.ui.fragments
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -20,21 +22,36 @@ import com.example.mynews.ui.NewsViewModel
 import com.example.mynews.ui.NewsViewModelProviderFactory
 import com.google.android.material.snackbar.Snackbar
 
-class SavedNewsFragment : Fragment(R.layout.fragment_saved_news) {
+class SavedNewsFragment : Fragment() {
 
     lateinit var viewModel: NewsViewModel
     lateinit var newsAdapter: NewsAdapter
     lateinit var binding: FragmentSavedNewsBinding
 
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = FragmentSavedNewsBinding.inflate(layoutInflater, container, false)
+        return binding.root
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding = FragmentSavedNewsBinding.bind(view)
-        val newsRepository= NewsRepository(ArticleDatabase.createDatabase(requireContext()))
-        val viewModelProviderFactory= NewsViewModelProviderFactory(newsRepository)
-        viewModel = ViewModelProvider(this,viewModelProviderFactory)[NewsViewModel::class.java]
+        viewModel = (activity as NewsActivity).viewModel
         setupRecyclerView()
 
         newsAdapter.setOnItemClickListener {
+            val bundle = Bundle().apply {
+                putSerializable("article", it)
+            }
+            findNavController().navigate(
+                R.id.action_savedNewsFragment_to_articleFragment,
+                bundle
+            )
+        }
+
+        newsAdapter.setOnReadMoreClickListener {
             val bundle = Bundle().apply {
                 putSerializable("article", it)
             }

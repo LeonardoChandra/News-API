@@ -5,15 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_56sdp"
+        android:background="#8655FD"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_24ssp"
+        android:gravity="center"
+        android:text="Search News"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/lisubosa"/>
+
     <EditText
         android:id="@+id/etSearch"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_37sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginLeft="@dimen/_9sdp"
+        android:layout_marginRight="@dimen/_9sdp"
         android:hint="Search..."
+        android:drawableLeft="@drawable/ic_search"
+        android:drawableTint="@color/searchMode"
+        android:drawablePadding="@dimen/_7sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/header"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvSearchNews"
